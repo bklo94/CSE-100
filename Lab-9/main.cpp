@@ -8,12 +8,12 @@ struct AdjListNode {
 	struct AdjListNode* next;
 };
  
-struct AdjList{
+struct AdjList {
 	struct AdjListNode *head;
 };
 
 struct AdjListNode* newAdjListNode(int destination, int weight) {
-    struct AdjListNode* newNode = (struct AdjListNode*)malloc(sizeof(struct AdjListNode));
+    struct AdjListNode* newNode = (struct AdjListNode*) malloc (sizeof(struct AdjListNode));
     newNode->destination = destination;
     newNode->weight = weight;
     newNode->next = NULL;
@@ -26,9 +26,9 @@ struct Graph{
 };
 
 struct Graph* newGraph(int V) {
-	struct Graph* graph = (struct Graph*)malloc(sizeof(struct Graph));
+	struct Graph* graph = (struct Graph*) malloc (sizeof(struct Graph));
 	graph->V = V;
-	graph->array = (struct AdjList*)malloc(V * sizeof(struct AdjList));
+	graph->array = (struct AdjList*) malloc (V * sizeof(struct AdjList));
 	for(int i = 0; i < V; i++) {
 		graph->array[i].head = NULL;
 	}
