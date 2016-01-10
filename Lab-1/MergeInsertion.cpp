@@ -62,7 +62,7 @@ deque<int> merge(const deque<int> &left, const deque<int> &right) {
 int main(int argc, char *argv[]) {
 	int length, input, i;
 	cin >> length;
-    deque<int> arr;
+    	deque<int> arr;
 	for(i = 0; i < length; i++) {
 		cin >> input;
 		arr.push_back(input);
