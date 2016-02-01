@@ -5,7 +5,6 @@ using namespace std;
 
 void PrintOptimalParens(vector< vector<int> > &s, int i, int j);
 
-
 void MatrixChainOrder(int * p, int n) {
 	int counts = 0, i, j, k, L, q;
 	int m[n+1][n+1];
