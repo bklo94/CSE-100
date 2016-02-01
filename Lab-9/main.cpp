@@ -80,12 +80,12 @@ void swap(struct MinHeapNode** x, struct MinHeapNode** y) {
 
 void minHeapify(struct MinHeap* minHeap, int index) {
 	int minNode = index, left = 2 * index + 1, right = 2 * index + 2;
-    if((right < minHeap->size) && (minHeap->array[right]->key < minHeap->array[minNode]->key)) {
-        minNode = right;
-    }
-    if((left < minHeap->size) && (minHeap->array[left]->key < minHeap->array[minNode]->key)) {
-		minNode = left;
+	if((right < minHeap->size) && (minHeap->array[right]->key < minHeap->array[minNode]->key)) {
+		minNode = right;
 	}
+	if((left < minHeap->size) && (minHeap->array[left]->key < minHeap->array[minNode]->key)) {
+		minNode = left;
+		}
 	if(minNode != index) {
 		MinHeapNode *smallestNode = minHeap->array[minNode];
 		MinHeapNode *idxNode = minHeap->array[index];
@@ -97,9 +97,9 @@ void minHeapify(struct MinHeap* minHeap, int index) {
 }
 
 struct MinHeapNode* extractMin(struct MinHeap* minHeap) {
-    if(minHeap->size == 0) {
-        return NULL;
-    }
+	if(minHeap->size == 0) {
+		return NULL;
+	}
 	struct MinHeapNode* root = minHeap->array[0]; // Store the root node
 	struct MinHeapNode* lastNode = minHeap->array[minHeap->size - 1];
 	minHeap->array[0] = lastNode;
@@ -148,9 +148,9 @@ void Prim_Algorithm(struct Graph* graph) {
 			temp_arr = temp_arr->next;
 		}
 	}
-    for(i = 1; i < V; i++) {
-        cout << parent_arr[i] <<endl;
-    }
+	for(i = 1; i < V; i++) {
+	cout << parent_arr[i] <<endl;
+	}
 }
 
 int main() {
