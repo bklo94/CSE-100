@@ -36,8 +36,8 @@ void Count_Sort(int i, int size) {
 
 void Radix_Sort(int size) {
 	for(int i = 10; i >= 1; i--) {
-			Count_Sort(i, size);
-		}
+		Count_Sort(i, size);
+	}
 }
 
 int main() {
