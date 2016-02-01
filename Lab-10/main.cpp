@@ -4,10 +4,10 @@ using namespace std;
 
 void Bellman_Ford(int ** graph, int source, int numVertices, int numEdges) {
 	int i, j, u, v, weight, distance[numVertices];
-    bool reachable = true;
+	bool reachable = true;
 	for(i = 0; i < numVertices; i++) {
-		distance[i] = INT_MAX;
-    }
+	distance[i] = INT_MAX;
+	}
 	distance[source] = 0;
 	for(i = 1; i <= numVertices-1; i++) {
 		for(j = 0; j < numEdges; j++) {
@@ -55,4 +55,3 @@ int main() {
 	Bellman_Ford(graph, 0, numVertices, numEdges);
 	return 0;
 }
-
