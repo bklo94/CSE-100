@@ -41,12 +41,12 @@ int main() {
         int arr[size];
         for(i = 0; i < size; i++) {
             cin >> arr[i];
-		}
+	}
 
         quick_sort(arr, 0, size-1);
 
         for(i = 0; i < size; i++) {
              cout << arr[i] <<endl;
-		}
+	}
         return 0;
 }
